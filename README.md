@@ -26,9 +26,8 @@ The dataset includes anonymized transactional and identity data. Key challenges:
 
 ## 🔧 Technologies Used
 
-- Python (Pandas, NumPy, Scikit-learn, LightGBM)
+- Python (Pandas, NumPy, Scikit-learn models: LightGBM,CART-DecisionTreeClassifier,RandomForestClassifier)
 - Seaborn & Matplotlib for visualizations
-- Imbalanced-learn (`SMOTE`) for resampling
 - Jupyter Notebooks for development
 
 ---
@@ -42,7 +41,7 @@ The dataset includes anonymized transactional and identity data. Key challenges:
 - Extracted time-based features from `TransactionDT`
 
 ### ✅ 2. Feature Engineering
-- Encoded `P_emaildomain`, `DeviceInfo`, `card` features
+- Encoded `P_emaildomain`, 'ProductCD', `card` features
 - Counted fraud frequency per category (smoothed)
 - Filled missing values using robust defaults
 
@@ -51,7 +50,7 @@ The dataset includes anonymized transactional and identity data. Key challenges:
 - Ensures classifier sees enough fraud patterns during training
 
 ### ✅ 4. Model Training
-- Trained LightGBM on resampled data
+- Trained LightGBM, DecisionTreeClassifier, RandomForestClassifier on resampled data
 - Used AUC-ROC as evaluation metric
 - Visualized top feature importances
 
@@ -99,6 +98,6 @@ fraud-detection/
 
 ## 🧠 Author
 
-Reagan Gabel — Data Engineering & ML Engineering Candidate  
-Let’s connect on [LinkedIn](https://www.linkedin.com)
+Ha Do — Data Engineering & ML Engineering Candidate  
+Let’s connect on [LinkedIn]([https://www.linkedin.com](https://www.linkedin.com/in/ha-van-do/))
 
