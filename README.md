@@ -37,7 +37,7 @@ The dataset includes anonymized transactional and identity data. Key challenges:
 
 ### ✅ 1. Data Preprocessing
 - Merged identity + transaction data
-- Dropped columns with >90% missing
+- Dropped columns with >50% missing, high unique values, or low-correlation
 - Frequency & target encoding on high-cardinality categorical features
 - Extracted time-based features from `TransactionDT`
 
