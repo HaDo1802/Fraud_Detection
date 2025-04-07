@@ -99,5 +99,4 @@ fraud-detection/
 ## 🧠 Author
 
 Ha Do — Data Engineering & ML Engineering Candidate  
-Let’s connect on [LinkedIn]([https://www.linkedin.com/in/ha-van-do/])
-
+Let’s connect on [LinkedIn]: https://www.linkedin.com/in/ha-van-do/
