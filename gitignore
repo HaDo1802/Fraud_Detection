@@ -1,0 +1,13 @@
+# Ignore data and models
+data/*
+!data/.gitignore
+
+models/*
+*.pkl
+*.joblib
+
+.ipynb_checkpoints/
+__pycache__/
+*.pyc
+.DS_Store
+.env
