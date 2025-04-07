@@ -1,3 +1,4 @@
+
 # 🕵️ IEEE-CIS Fraud Detection: Machine Learning Pipeline
 
 This repository contains a complete machine learning pipeline for detecting fraudulent transactions using the [IEEE-CIS Fraud Detection dataset](https://www.kaggle.com/competitions/ieee-fraud-detection). The goal is to build a production-grade fraud detection model, with feature engineering, class imbalance handling, and interpretable model evaluation.
@@ -23,6 +24,21 @@ The dataset includes anonymized transactional and identity data. Key challenges:
 - Showcase industry-ready ML workflow
 
 ---
+
+## 💼 Business Impact of the Model
+
+The model addresses a critical business challenge: **fraudulent financial transactions** that result in millions of dollars in losses for online retailers, banks, and payment processors. By accurately identifying fraudulent transactions with high recall and AUC, the system:
+
+- Helps reduce financial losses from unauthorized transactions.
+- Enables real-time transaction flagging and intervention.
+- Supports regulatory compliance and risk mitigation strategies.
+- Improves customer trust by minimizing false positives (legitimate users being flagged).
+
+### Example Use Case:
+A flagged transaction with a high fraud probability could trigger a verification prompt or temporary hold, reducing the chances of loss while minimizing inconvenience for legitimate users.
+
+---
+
 
 ## 🔧 Technologies Used
 
@@ -68,6 +84,30 @@ The dataset includes anonymized transactional and identity data. Key challenges:
 > Metrics reflect validation set, with resampling applied
 
 ---
+## ⚠️ Model Limitations
+
+Despite solid performance, the model has some limitations:
+
+- **Imbalanced Data Risk**: Even with SMOTE, there's a chance of overfitting synthetic fraud patterns that may not generalize well.
+- **Feature Obfuscation**: Many features (like V1–V339) are anonymized and may not reflect real-world interpretability.
+- **Real-Time Limitations**: SMOTE and model retraining are batch processes; this may delay detection in real-time environments.
+- **Dynamic Fraud Patterns**: Fraud tactics evolve. A model trained on static historical data might miss new fraud techniques.
+
+---
+
+## 🔧 Suggestions for Improvement
+
+To make the model more robust and production-ready:
+
+1. **Auto-Feature Engineering**: Use tools like `featuretools` or `Kats` to discover temporal or cross-entity relationships.
+2. **Adversarial Validation**: Ensure train/test splits are from the same distribution to avoid data drift.
+3. **Model Stacking**: Combine LightGBM with XGBoost, RandomForest or deep learning models using a meta-classifier.
+4. **Online Learning**: Transition to an online learning setup (e.g., with River or Vowpal Wabbit) for real-time updates.
+5. **Deploy Monitoring**: Set up logging for prediction drift, fraud false positives, and concept drift over time.
+
+These strategies would better align the model with the dynamic nature of financial fraud and support both batch and real-time detection.
+
+---
 
 ## 🚀 Future Work
 
@@ -86,8 +126,6 @@ fraud-detection/
 │   └── .gitignore
 ├── notebooks/
 │   └── HW2.ipynb
-├── src/
-│   └── feature_engineering.py
 ├── models/
 ├── README.md
 ├── requirements.txt
@@ -100,3 +138,6 @@ fraud-detection/
 
 Ha Do — Data Engineering & ML Engineering Candidate  
 Let’s connect on [LinkedIn]: https://www.linkedin.com/in/ha-van-do/
+---
+
+
